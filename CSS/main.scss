@@ -65,6 +65,18 @@ body {
 
 ////// Component Style Settings - Yash Sonalia - 20 Mar 2021 //////
 
+// Scrollbar Styling{
+.c-scrollbar {
+	z-index: 999;
+	&_thumb {
+		background-color: var(--clr-primary-yellow-100) !important;
+		opacity: 1 !important;
+
+		&:hover {
+			background-color: var(--clr-primary-yellow-200) !important;
+		}
+	}
+}
 // Cursor Styling
 
 @keyframes rotation {

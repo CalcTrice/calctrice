@@ -80,14 +80,20 @@ body {
 }
 
 nav.navbar {
-  position: -webkit-sticky;
-  position: sticky;
-  z-index: 100;
+  position: fixed;
+  z-index: 1;
   top: 0px;
   left: 0px;
+  width: 100%;
   padding: 0.5rem 2rem;
   border-bottom: 1px solid var(--clr-neutral-black-100);
-  background-color: var(--clr-neutral-white-200);
+  background-color: var(--clr-neutral-white-200) !important;
+}
+
+nav.navbar .collapse {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 nav.navbar ul {
@@ -106,7 +112,7 @@ nav.navbar a {
   font-weight: var(--wgt-500);
   color: var(--clr-neutral-black-400) !important;
   position: relative;
-  padding: 0.5em 0px;
+  padding: 0rem !important;
 }
 
 nav.navbar a::after {
@@ -118,6 +124,7 @@ nav.navbar a::after {
   width: 100%;
   height: 2px;
   background: var(--clr-primary-yellow-200);
+  border-radius: 1px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
@@ -125,6 +132,14 @@ nav.navbar a::after {
 nav.navbar a:hover::after {
   bottom: 0;
   opacity: 1;
+}
+
+nav.navbar .navbar-toggler {
+  border: none;
+}
+
+.landingPage {
+  margin-top: 57px;
 }
 
 .landingPage .heroSection .heroHeadline span {
@@ -266,6 +281,19 @@ button + svg:hover {
     -webkit-transform: translate3d(var(--move-final), 0, 0);
             transform: translate3d(var(--move-final), 0, 0);
   }
+}
+
+.c-scrollbar {
+  z-index: 999;
+}
+
+.c-scrollbar_thumb {
+  background-color: var(--clr-primary-yellow-100) !important;
+  opacity: 1 !important;
+}
+
+.c-scrollbar_thumb:hover {
+  background-color: var(--clr-primary-yellow-200) !important;
 }
 
 @-webkit-keyframes rotation {

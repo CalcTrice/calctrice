@@ -1,8 +1,8 @@
 "use strict";
 
 const circleSVG = document.getElementById("cursor-svg");
-const buttonHover = document.querySelectorAll(".button");
-console.log(buttonHover);
+// const buttonHover = document.querySelectorAll(".button");
+// console.log(buttonHover);
 let mouseX = 0;
 let mouseY = 0;
 
