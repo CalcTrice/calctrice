@@ -10,6 +10,7 @@
 html {
   width: 100%;
   height: 100%;
+  font-family: 5vw;
 }
 
 body {
@@ -39,8 +40,8 @@ body {
   --clr-primary-yellow-200: #ffb000;
   --clr-secondary-warning: #b33a3a;
   --clr-secondary-success: #2aa965;
-  --fs-800: 90px;
-  --fs-700: 80px;
+  --fs-800: 6rem;
+  --fs-700: 5rem;
   --fs-600: 44px;
   --fs-500: 22px;
   --fs-400: 20px;
