@@ -55,7 +55,7 @@ body {
 
 @media screen and (max-width: 400px) {
   :root {
-    --fs-800: 50px;
+    --fs-800: 40px;
     --fs-700: 30px;
     --fs-600: 28px;
     --fs-500: 22px;
@@ -68,7 +68,7 @@ body {
 
 @media screen and (max-width: 768px) {
   :root {
-    --fs-800: 50px;
+    --fs-800: 40px;
     --fs-700: 30px;
     --fs-600: 28px;
     --fs-500: 22px;
