@@ -98,12 +98,16 @@ body {
 	z-index: 999;
 	top: 50%;
 	left: 50%;
-	animation: rotation 3.5s infinite linear;
+	animation: rotation 3s infinite linear;
 	pointer-events: none;
-	transition: top 0.5s, left 0.5s;
+	transition: top 0.2s, left 0.2s;
 	transition-timing-function: ease-out;
 }
 //Document Styling
+.section {
+	height: 100vh;
+	width: 100vw;
+}
 
 a {
 	text-decoration: none !important;
@@ -118,13 +122,22 @@ h1 {
 	line-height: 200px;
 }
 
+h2 {
+	text-align: center;
+	font-size: var(--fs-700) !important;
+	color: var(--clr-neutral-black-400) !important;
+	font-weight: var(--wgt-700) !important;
+	position: relative;
+	// marquee {
+	// 	ul {
+	// 		display: flex;
+	// 		list-style-type: none;
+	// 	}
+	// }
+}
 h4,
 h4 a {
 	font-size: var(--fs-200) !important;
 	font-weight: var(--wgt-500) !important;
 	color: var(--clr-neutral-black-400) !important;
-}
-
-.section {
-	height: 100vh;
 }

@@ -142,39 +142,84 @@ nav.navbar .navbar-toggler {
   margin-top: 57px;
 }
 
-.landingPage .heroSection .heroHeadline span {
-  display: block;
-}
-
-.landingPage .heroSection .heroHeadline span:nth-child(1) {
-  text-align: center;
-  margin-left: 0px;
-}
-
-.landingPage .heroSection .heroHeadline span:nth-child(2) {
-  text-align: right;
-  margin-right: 0px;
-}
-
-.landingPage .heroSection .heroHeadline span:nth-child(3) {
-  text-align: left;
-}
-
-.landingPage .heroSection .heroHeadline span:nth-child(4) {
-  text-align: right;
-  margin-right: 120px;
-}
-
-.landingPage .heroSection .heroHeadline span:nth-child(5) {
-  text-align: center;
-}
-
-.landingPage .heroSection .heroHeadline .heading-span-outline {
-  -webkit-text-stroke: 3px;
+.landingPage .heading-span-outline {
+  -webkit-text-stroke: 2px;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: var(--clr-neutral-black-400) !important;
 }
 
+.heroSection {
+  height: auto;
+  width: 100%;
+}
+
+.heroSection .heroHeadline span {
+  display: block;
+}
+
+.heroSection .heroHeadline span:nth-child(1) {
+  text-align: center;
+  margin-left: 0px;
+}
+
+.heroSection .heroHeadline span:nth-child(2) {
+  text-align: right;
+  margin-right: 0px;
+}
+
+.heroSection .heroHeadline span:nth-child(3) {
+  text-align: left;
+}
+
+.heroSection .heroHeadline span:nth-child(4) {
+  text-align: right;
+  margin-right: 120px;
+}
+
+.heroSection .heroHeadline span:nth-child(5) {
+  text-align: center;
+}
+
+.whatWeDoSection {
+  height: auto;
+  width: 100%;
+}
+
+@-webkit-keyframes cssmarquee {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes cssmarquee {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+/*
+<button class="button button--major-action-btn">
+						<span>Subscribe</span>
+						<div class="marquee" aria-hidden="true">
+							<div class="marquee__inner">
+								<span>Subscribe</span>
+								<span>Subscribe</span>
+								<span>Subscribe</span>
+								<span>Subscribe</span>
+							</div>
+						</div>
+					</button>
+*/
 .button {
   pointer-events: auto;
   cursor: pointer;
@@ -240,9 +285,8 @@ button + svg:hover {
           transform: translate3d(var(--move-initial), 0, 0);
   -webkit-animation: marquee 1.5s linear infinite;
           animation: marquee 1.5s linear infinite;
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  opacity: 0;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
 }
 
 .button--major-action-btn:hover .marquee__inner {
@@ -329,13 +373,18 @@ button + svg:hover {
   z-index: 999;
   top: 50%;
   left: 50%;
-  -webkit-animation: rotation 3.5s infinite linear;
-          animation: rotation 3.5s infinite linear;
+  -webkit-animation: rotation 3s infinite linear;
+          animation: rotation 3s infinite linear;
   pointer-events: none;
-  -webkit-transition: top 0.5s, left 0.5s;
-  transition: top 0.5s, left 0.5s;
+  -webkit-transition: top 0.2s, left 0.2s;
+  transition: top 0.2s, left 0.2s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
 }
 
 a {
@@ -355,14 +404,18 @@ h1 {
   line-height: 200px;
 }
 
+h2 {
+  text-align: center;
+  font-size: var(--fs-700) !important;
+  color: var(--clr-neutral-black-400) !important;
+  font-weight: var(--wgt-700) !important;
+  position: relative;
+}
+
 h4,
 h4 a {
   font-size: var(--fs-200) !important;
   font-weight: var(--wgt-500) !important;
   color: var(--clr-neutral-black-400) !important;
-}
-
-.section {
-  height: 100vh;
 }
 /*# sourceMappingURL=main.css.map */
