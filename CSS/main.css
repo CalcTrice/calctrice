@@ -1,33 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600;1,700&display=swap");
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-  font-family: 5vw;
-}
-
-body {
-  position: relative;
-  overflow-x: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-::-moz-selection {
-  background-color: var(--clr-primary-yellow-100);
-}
-
-::selection {
-  background-color: var(--clr-primary-yellow-100);
-}
-
 :root {
   --clr-neutral-black-100: rgba(0, 0, 0, 0.15);
   --clr-neutral-black-200: rgba(0, 0, 0, 0.3);
@@ -41,9 +12,9 @@ body {
   --clr-secondary-warning: #b33a3a;
   --clr-secondary-success: #2aa965;
   --fs-800: 6rem;
-  --fs-700: 5rem;
-  --fs-600: 44px;
-  --fs-500: 22px;
+  --fs-700: 5.5rem;
+  --fs-600: 3.5rem;
+  --fs-500: 2rem;
   --fs-400: 20px;
   --fs-300: 18px;
   --fs-200: 16px;
@@ -80,12 +51,41 @@ body {
   }
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  outline-color: var(--clr-primary-yellow-200) !important;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  font-family: 5vw;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+::-moz-selection {
+  background-color: var(--clr-primary-yellow-100);
+}
+
+::selection {
+  background-color: var(--clr-primary-yellow-100);
+}
+
 nav.navbar {
   position: relative;
   z-index: 999;
   width: 100%;
   padding: 0.5rem 2rem;
-  border-bottom: 1px solid var(--clr-neutral-black-100);
   background-color: var(--clr-neutral-white-200) !important;
 }
 
@@ -115,9 +115,10 @@ nav.navbar a {
 }
 
 nav.navbar a::after {
+  content: "";
   position: absolute;
   opacity: 0;
-  bottom: -10%;
+  bottom: -10px;
   left: 0;
   content: "";
   width: 100%;
@@ -190,6 +191,10 @@ nav.navbar .navbar-toggler {
   place-items: center left;
 }
 
+.heroSection .CTABtn > * {
+  margin: 10px 0px;
+}
+
 .whatWeDoSection {
   width: 100%;
 }
@@ -197,53 +202,27 @@ nav.navbar .navbar-toggler {
 .whatWeDoSection .whatWeDoHeader hr {
   margin: 10px auto;
   width: 90%;
+  color: var(--clr-neutral-black-300);
 }
 
-/*
-<button class="button button--major-action-btn">
-						<span>Subscribe</span>
-						<div class="marquee" aria-hidden="true">
-							<div class="marquee__inner">
-								<span>Subscribe</span>
-								<span>Subscribe</span>
-								<span>Subscribe</span>
-								<span>Subscribe</span>
-							</div>
-						</div>
-					</button>
-*/
 .button {
   pointer-events: auto;
   cursor: pointer;
   background: transparent;
   border: none;
   width: 180px;
-  height: 50px;
   margin: 0;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   position: relative;
-  display: inline-block;
-}
-
-button + svg:hover {
-  opacity: 0;
-}
-
-.button::before,
-.button::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  text-decoration: none;
 }
 
 .button--major-action-btn {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: var(--wgt-600);
   border: 2px solid var(--clr-neutral-black-400);
   border-radius: 0px;
+  height: 50px;
 }
 
 .button--major-action-btn > span {
@@ -321,6 +300,34 @@ button + svg:hover {
   }
 }
 
+.button--minor-action-button {
+  font-weight: var(--wgt-500);
+  border: none;
+  border-radius: 0px;
+  position: relative;
+  padding: 0rem !important;
+}
+
+.button--minor-action-button::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  bottom: -10px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: var(--clr-neutral-black-400);
+  border-radius: 1px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.button--minor-action-button:hover::after {
+  bottom: 0;
+  opacity: 1;
+}
+
 .c-scrollbar {
   z-index: 999;
 }
@@ -377,5 +384,78 @@ h4 a {
   font-size: var(--fs-200) !important;
   font-weight: var(--wgt-500) !important;
   color: var(--clr-neutral-black-400) !important;
+}
+
+@media screen and (max-width: 992px) {
+  nav.navbar {
+    padding: 0.4em;
+  }
+  nav.navbar .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+  nav.navbar ul {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0px;
+  }
+  .heroSection .CTABtn {
+    justify-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav.navbar {
+    padding: 0.4em;
+    border-bottom: 1px solid var(--clr-neutral-black-100);
+  }
+  nav.navbar .logo {
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+  nav.navbar ul {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 0px;
+  }
+  nav.navbar li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  nav.navbar a::after {
+    display: none;
+  }
+  .button--minor-action-button::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+    height: 100%;
+  }
+  main .landingPage .CTA-headline {
+    margin-top: 30px;
+  }
+  main .landingPage .CTA-headline .circle {
+    width: 350px;
+    height: 350px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  main .landingPage .CTA-button {
+    margin-top: 100px;
+  }
+  main .landingPage .CTA-articles h4 {
+    padding-top: 50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

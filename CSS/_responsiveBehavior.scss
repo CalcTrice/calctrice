@@ -10,10 +10,17 @@
 			padding: 0px;
 		}
 	}
+	.heroSection {
+		.CTABtn {
+			justify-items: center;
+			align-items: flex-start;
+		}
+	}
 }
 @media screen and(max-width: 768px) {
 	nav.navbar {
 		padding: 0.4em;
+		border-bottom: 1px solid var(--clr-neutral-black-100);
 
 		.logo {
 			flex: 0;
@@ -22,6 +29,16 @@
 			flex: 1;
 			padding: 0px;
 		}
+		li {
+			padding-top: 15px;
+			padding-bottom: 15px;
+		}
+		a::after {
+			display: none;
+		}
+	}
+	.button--minor-action-button::after {
+		display: none;
 	}
 }
 @media screen and(max-width:768px) {
@@ -30,9 +47,6 @@
 		height: 100%;
 
 		.landingPage {
-			.CTA {
-			}
-
 			.CTA-headline {
 				margin-top: 30px;
 				.circle {

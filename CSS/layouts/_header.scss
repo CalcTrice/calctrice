@@ -41,6 +41,9 @@
 	.CTABtn {
 		display: grid;
 		place-items: center left;
+		> * {
+			margin: 10px 0px;
+		}
 	}
 }
 .whatWeDoSection {
@@ -49,6 +52,7 @@
 		hr {
 			margin: 10px auto;
 			width: 90%;
+			color: var(--clr-neutral-black-300);
 		}
 	}
 }

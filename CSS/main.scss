@@ -4,31 +4,6 @@
 
 // @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
 
-* {
-	box-sizing: border-box;
-	//font-size: 62.5%;
-	margin: 0;
-	padding: 0;
-
-	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-		sans-serif;
-}
-html {
-	width: 100%;
-	height: 100%;
-	font-family: 5vw;
-}
-body {
-	position: relative;
-	overflow-x: hidden;
-	width: 100%;
-	height: 100%;
-}
-::selection {
-	background-color: var(--clr-primary-yellow-100);
-}
-
 :root {
 	@each $color, $shades in $colors {
 		@each $shade, $value in $shades {
@@ -60,7 +35,31 @@ body {
 		--wgt-#{$weight}: #{$value};
 	}
 }
+* {
+	box-sizing: border-box;
+	//font-size: 62.5%;
+	margin: 0;
+	padding: 0;
 
+	font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+		sans-serif;
+	outline-color: var(--clr-primary-yellow-200) !important;
+}
+html {
+	width: 100%;
+	height: 100%;
+	font-family: 5vw;
+}
+body {
+	position: relative;
+	overflow-x: hidden;
+	width: 100%;
+	height: 100%;
+}
+::selection {
+	background-color: var(--clr-primary-yellow-100);
+}
 @import "layouts/layouts";
 @import "components/components";
 
@@ -125,3 +124,5 @@ h4 a {
 	font-weight: var(--wgt-500) !important;
 	color: var(--clr-neutral-black-400) !important;
 }
+
+@import "responsiveBehavior";

@@ -3,11 +3,9 @@ nav.navbar {
 	z-index: 999;
 	width: 100%;
 	padding: 0.5rem 2rem;
-	border-bottom: 1px solid var(--clr-neutral-black-100);
+	//border-bottom: 1px solid var(--clr-neutral-black-100);
 	background-color: var(--clr-neutral-white-200) !important;
 
-	.logo {
-	}
 	.collapse {
 		justify-content: flex-end;
 	}
@@ -30,9 +28,10 @@ nav.navbar {
 		padding: 0rem !important;
 
 		&::after {
+			content: "";
 			position: absolute;
 			opacity: 0;
-			bottom: -10%;
+			bottom: -10px;
 			left: 0;
 			content: "";
 			width: 100%;
