@@ -80,10 +80,8 @@ body {
 }
 
 nav.navbar {
-  position: fixed;
+  position: relative;
   z-index: 999;
-  top: 0px;
-  left: 0px;
   width: 100%;
   padding: 0.5rem 2rem;
   border-bottom: 1px solid var(--clr-neutral-black-100);
@@ -138,10 +136,6 @@ nav.navbar .navbar-toggler {
   border: none;
 }
 
-.landingPage {
-  margin-top: 57px;
-}
-
 .landingPage .heading-span-outline {
   -webkit-text-stroke: 2px;
   -webkit-text-fill-color: transparent;
@@ -149,6 +143,11 @@ nav.navbar .navbar-toggler {
 }
 
 .heroSection {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
   height: calc(100vh - 60px);
   position: relative;

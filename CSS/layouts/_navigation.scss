@@ -1,8 +1,6 @@
 nav.navbar {
-	position: fixed;
+	position: relative;
 	z-index: 999;
-	top: 0px;
-	left: 0px;
 	width: 100%;
 	padding: 0.5rem 2rem;
 	border-bottom: 1px solid var(--clr-neutral-black-100);

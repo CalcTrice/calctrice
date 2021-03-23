@@ -1,5 +1,4 @@
 .landingPage {
-	margin-top: 57px;
 	.heading-span-outline {
 		-webkit-text-stroke: 2px;
 		-webkit-text-fill-color: transparent;
@@ -8,6 +7,8 @@
 }
 
 .heroSection {
+	display: grid;
+	align-items: center;
 	width: 100%;
 	height: calc(100vh - 60px);
 	position: relative;
