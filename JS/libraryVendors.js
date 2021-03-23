@@ -5,5 +5,15 @@
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
     smooth: true,
-    multiplier: 1,
+    multiplier: 15,
 });
+
+window.onload = function () {
+    Particles.init({
+        selector: '.background',
+        maxParticles: 200,
+        color: "#ffb000",
+        connectParticles: true
+
+    });
+};

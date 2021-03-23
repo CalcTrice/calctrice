@@ -72,17 +72,17 @@ button + svg:hover {
 	transform: translate3d(var(--move-initial), 0, 0);
 	animation: marquee 1.5s linear infinite;
 	animation-play-state: running;
-	//opacity: 0;
+	opacity: 0;
 }
 
 .button--major-action-btn:hover .marquee__inner {
 	animation-play-state: running;
 	opacity: 1;
 	transition-duration: 0.4s;
-	color: var(--clr-neutral-black-400);
-	background-color: var(--clr-white-black-200);
-	// color: var(--clr-neutral-white-200);
-	// background-color: var(--clr-neutral-black-400);
+	// color: var(--clr-neutral-black-400);
+	// background-color: var(--clr-white-black-200);
+	color: var(--clr-neutral-white-200);
+	background-color: var(--clr-neutral-black-400);
 }
 
 .marquee span {

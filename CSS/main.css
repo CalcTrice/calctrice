@@ -39,8 +39,8 @@ body {
   --clr-primary-yellow-200: #ffb000;
   --clr-secondary-warning: #b33a3a;
   --clr-secondary-success: #2aa965;
-  --fs-800: 100px;
-  --fs-700: 90px;
+  --fs-800: 90px;
+  --fs-700: 80px;
   --fs-600: 44px;
   --fs-500: 22px;
   --fs-400: 20px;
@@ -149,8 +149,12 @@ nav.navbar .navbar-toggler {
 }
 
 .heroSection {
-  height: auto;
   width: 100%;
+}
+
+.heroSection .heroHeadline {
+  position: relative;
+  z-index: 2;
 }
 
 .heroSection .heroHeadline span {
@@ -158,13 +162,11 @@ nav.navbar .navbar-toggler {
 }
 
 .heroSection .heroHeadline span:nth-child(1) {
-  text-align: center;
-  margin-left: 0px;
+  text-align: left;
 }
 
 .heroSection .heroHeadline span:nth-child(2) {
-  text-align: right;
-  margin-right: 0px;
+  text-align: left;
 }
 
 .heroSection .heroHeadline span:nth-child(3) {
@@ -172,16 +174,20 @@ nav.navbar .navbar-toggler {
 }
 
 .heroSection .heroHeadline span:nth-child(4) {
-  text-align: right;
-  margin-right: 120px;
+  text-align: left;
 }
 
 .heroSection .heroHeadline span:nth-child(5) {
-  text-align: center;
+  text-align: left;
+}
+
+.heroSection .CTABtn {
+  display: -ms-grid;
+  display: grid;
+  place-items: center left;
 }
 
 .whatWeDoSection {
-  height: auto;
   width: 100%;
 }
 
@@ -287,6 +293,7 @@ button + svg:hover {
           animation: marquee 1.5s linear infinite;
   -webkit-animation-play-state: running;
           animation-play-state: running;
+  opacity: 0;
 }
 
 .button--major-action-btn:hover .marquee__inner {
@@ -295,8 +302,8 @@ button + svg:hover {
   opacity: 1;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
-  color: var(--clr-neutral-black-400);
-  background-color: var(--clr-white-black-200);
+  color: var(--clr-neutral-white-200);
+  background-color: var(--clr-neutral-black-400);
 }
 
 .marquee span {
@@ -340,50 +347,16 @@ button + svg:hover {
   background-color: var(--clr-primary-yellow-200) !important;
 }
 
-@-webkit-keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-359deg);
-            transform: rotate(-359deg);
-  }
-}
-
-@keyframes rotation {
-  from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-359deg);
-            transform: rotate(-359deg);
-  }
-}
-
-#cursor-svg {
-  overflow: hidden;
-  width: 100px;
-  height: auto;
-  font-size: 64px;
-  font-family: "Poppins";
-  font-weight: var(--wgt-700);
+.background {
   position: absolute;
-  z-index: 999;
-  top: 50%;
-  left: 50%;
-  -webkit-animation: rotation 3s infinite linear;
-          animation: rotation 3s infinite linear;
-  pointer-events: none;
-  -webkit-transition: top 0.2s, left 0.2s;
-  transition: top 0.2s, left 0.2s;
-  -webkit-transition-timing-function: ease-out;
-          transition-timing-function: ease-out;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
 
 .section {
-  height: 100vh;
+  height: calc(100%);
   width: 100vw;
 }
 

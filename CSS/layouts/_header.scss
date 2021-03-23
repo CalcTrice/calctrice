@@ -8,34 +8,39 @@
 }
 
 .heroSection {
-	height: auto;
 	width: 100%;
+
 	.heroHeadline {
+		position: relative;
+		z-index: 2;
 		span {
 			display: block;
+
+			> * {
+			}
 			&:nth-child(1) {
-				text-align: center;
-				margin-left: 0px;
+				text-align: left;
 			}
 			&:nth-child(2) {
-				text-align: right;
-				margin-right: 0px;
+				text-align: left;
 			}
 			&:nth-child(3) {
 				text-align: left;
 			}
 			&:nth-child(4) {
-				text-align: right;
-				margin-right: 120px;
+				text-align: left;
 			}
 			&:nth-child(5) {
-				text-align: center;
+				text-align: left;
 			}
 		}
 	}
+	.CTABtn {
+		display: grid;
+		place-items: center left;
+	}
 }
 .whatWeDoSection {
-	height: auto;
 	width: 100%;
 }
 @keyframes cssmarquee {
