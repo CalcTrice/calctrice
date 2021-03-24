@@ -10,9 +10,12 @@
 	display: grid;
 	align-items: center;
 	width: 100%;
-	height: calc(100vh - 60px);
+	//height: calc(100vh - 60px);
 	position: relative;
-
+	//margin-top: 50px;
+	> * {
+		transform: translateY(-40px);
+	}
 	.heroHeadline {
 		position: relative;
 		z-index: 2;
@@ -39,6 +42,7 @@
 		}
 	}
 	.CTABtn {
+		transform: translateY(-20px);
 		display: grid;
 		place-items: center left;
 		> * {
@@ -48,11 +52,12 @@
 }
 .whatWeDoSection {
 	width: 100%;
+	height: auto;
 	.whatWeDoHeader {
-		hr {
-			margin: 10px auto;
-			width: 90%;
-			color: var(--clr-neutral-black-300);
-		}
+		padding: 3vh;
+		width: 90%;
+		margin: auto;
+		border-top: 1px solid var(--clr-neutral-black-100);
+		border-bottom: 1px solid var(--clr-neutral-black-100);
 	}
 }

@@ -37,7 +37,7 @@
 }
 * {
 	box-sizing: border-box;
-	//font-size: 62.5%;
+
 	margin: 0;
 	padding: 0;
 
@@ -49,7 +49,7 @@
 html {
 	width: 100%;
 	height: 100%;
-	font-family: 5vw;
+	//font-size: 5vw;
 }
 body {
 	position: relative;
@@ -60,8 +60,6 @@ body {
 ::selection {
 	background-color: var(--clr-primary-yellow-100);
 }
-@import "layouts/layouts";
-@import "components/components";
 
 ////// Component Style Settings - Yash Sonalia - 20 Mar 2021 //////
 
@@ -88,12 +86,20 @@ body {
 }
 //Document Styling
 
-.section {
+section {
 	width: 100vw;
+	min-height: 100vh;
+	height: auto;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
 a {
-	text-decoration: none !important;
+	margin-bottom: 0px !important;
 }
 h1 {
 	text-align: center;
@@ -111,18 +117,48 @@ h2 {
 	color: var(--clr-neutral-black-400) !important;
 	font-weight: var(--wgt-700) !important;
 	position: relative;
-	// marquee {
-	// 	ul {
-	// 		display: flex;
-	// 		list-style-type: none;
-	// 	}
-	// }
 }
-h4,
-h4 a {
+h3 {
+	font-size: var(--fs-600) !important;
+	color: var(--clr-neutral-black-400) !important;
+	font-weight: var(--wgt-600) !important;
+}
+h4 {
 	font-size: var(--fs-200) !important;
 	font-weight: var(--wgt-500) !important;
 	color: var(--clr-neutral-black-400) !important;
 }
 
+h5 {
+	font-size: var(--fs-500) !important;
+	font-weight: var(--wgt-500) !important;
+	color: var(--clr-neutral-black-300) !important;
+	letter-spacing: 2px;
+}
+
+span.bullet-number {
+	font-size: var(--fs-400);
+	color: var(--clr-primary-yellow-200);
+	font-weight: var(--wgt-600);
+	background-color: var(--clr-neutral-black-400);
+	min-width: 40px;
+	min-height: 40px;
+	max-width: 40px;
+	max-height: 40px;
+	border-radius: 50%;
+	padding: 5px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+p {
+	font-size: var(--fs-100) !important;
+	font-weight: var(--wgt-400) !important;
+	color: var(--clr-neutral-black-400) !important;
+}
+a {
+	text-decoration: none !important;
+}
+@import "layouts/layouts";
+@import "components/components";
 @import "responsiveBehavior";
