@@ -45,4 +45,6 @@ const testimonialsCarouselSlider = () => {
     })
 }
 
-testimonialsCarouselSlider();
+window.onload = function () {
+    testimonialsCarouselSlider();
+}
