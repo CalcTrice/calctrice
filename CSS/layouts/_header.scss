@@ -42,22 +42,27 @@
 		}
 	}
 	.CTABtn {
-		transform: translateY(-20px);
 		display: grid;
 		place-items: center left;
-		> * {
+		> * + * {
 			margin: 10px 0px;
+			transform: translateX(30px);
 		}
 	}
 }
-.whatWeDoSection {
+.whatWeDoSection,
+.testimonialsSection {
 	width: 100%;
 	height: auto;
-	.whatWeDoHeader {
-		padding: 3vh;
-		width: 90%;
-		margin: auto;
-		border-top: 1px solid var(--clr-neutral-black-100);
-		border-bottom: 1px solid var(--clr-neutral-black-100);
-	}
+}
+.whatWeDoHeader {
+	padding: 4vh 5vw;
+	width: 90%;
+	margin: auto;
+	border-top: 1px solid var(--clr-neutral-black-100);
+	border-bottom: 1px solid var(--clr-neutral-black-100);
+	margin-bottom: 10px;
+}
+.testimonialsHeader {
+	padding: 1vh 5vw;
 }

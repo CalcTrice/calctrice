@@ -14,6 +14,11 @@
 		.CTABtn {
 			justify-items: center;
 			align-items: flex-start;
+			padding-left: 30px;
+
+			> * + * {
+				transform: translateX(0px);
+			}
 		}
 	}
 }
@@ -40,30 +45,65 @@
 	.button--minor-action-button::after {
 		display: none;
 	}
-}
-@media screen and(max-width:768px) {
-	main {
+
+	.testimonialsHeader {
+		padding: 0px 20px 20px;
+		transform: translateY(-50%);
+	}
+
+	.testimonials-container {
+		//background-color: black;
+		width: 90%;
+		margin: auto;
+
+		[class*="line-"] {
+			display: none;
+		}
+	}
+	.carousel {
 		width: 100%;
-		height: 100%;
+		margin: auto;
+	}
+	.arrow {
+		top: 120%;
+	}
+	.arrow-prev {
+		left: 15%;
+	}
+	.arrow-next {
+		right: 15%;
+	}
+}
 
-		.landingPage {
-			.CTA-headline {
-				margin-top: 30px;
-				.circle {
-					width: 350px;
-					height: 350px;
-					transform: translate(-50%, -50%);
+@media screen and(max-width:400px) {
+	.services-what-we-do {
+		.accordion-body {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 0px !important;
+
+			.illustration {
+				order: 2;
+				margin: 20px 0px;
+				flex: 1;
+				display: none;
+			}
+
+			.description {
+				flex: 1;
+				order: 1;
+
+				> * + * {
+					width: 100%;
+					text-align: center;
 				}
 			}
-
-			.CTA-button {
-				margin-top: 100px;
-			}
-			.CTA-articles {
-				h4 {
-					padding-top: 50px;
-				}
-			}
+		}
+	}
+	.accordian-header {
+		h5 {
+			display: none;
 		}
 	}
 }

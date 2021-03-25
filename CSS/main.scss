@@ -49,6 +49,7 @@
 html {
 	width: 100%;
 	height: 100%;
+	overflow-x: hidden;
 	//font-size: 5vw;
 }
 body {
@@ -84,6 +85,11 @@ body {
 	z-index: 0;
 	mix-blend-mode: screen;
 }
+
+.row {
+	margin-right: 0px !important;
+}
+
 //Document Styling
 
 section {
@@ -136,25 +142,26 @@ h5 {
 	letter-spacing: 2px;
 }
 
-span.bullet-number {
-	font-size: var(--fs-400);
-	color: var(--clr-primary-yellow-200);
-	font-weight: var(--wgt-600);
-	background-color: var(--clr-neutral-black-400);
-	min-width: 40px;
-	min-height: 40px;
-	max-width: 40px;
-	max-height: 40px;
-	border-radius: 50%;
-	padding: 5px;
-	text-align: center;
-	vertical-align: middle;
-	margin-right: 10px;
-}
 p {
 	font-size: var(--fs-100) !important;
 	font-weight: var(--wgt-400) !important;
 	color: var(--clr-neutral-black-400) !important;
+}
+q {
+	font-size: var(--fs-300);
+	font-weight: var(--wgt-500);
+	color: var(--clr-neutral-white-200);
+}
+
+span.username {
+	font-size: var(--fs-200);
+	font-weight: var(--wgt-400);
+	color: var(--clr-neutral-white-100);
+}
+blockquote {
+	font-size: 14px;
+	font-weight: var(--wgt-400);
+	color: var(--clr-neutral-white-200);
 }
 a {
 	text-decoration: none !important;

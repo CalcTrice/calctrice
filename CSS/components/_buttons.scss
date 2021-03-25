@@ -87,7 +87,8 @@
 	font-weight: var(--wgt-500);
 	border: none;
 	border-radius: 0px;
-
+	width: auto;
+	height: 40px;
 	position: relative;
 	padding: 0rem !important;
 	&::after {
@@ -106,7 +107,7 @@
 
 	&:hover {
 		&::after {
-			bottom: 0;
+			bottom: 10px;
 			opacity: 1;
 		}
 	}

@@ -1,6 +1,5 @@
 
 //Locomotive Scroll
-// import LocomotiveScroll from 'locomotive-scroll';
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
@@ -8,6 +7,8 @@ const scroll = new LocomotiveScroll({
     multiplier: 1,
 });
 
+
+// Particle Effect
 window.onload = function () {
     Particles.init({
         selector: '.background',
@@ -39,3 +40,4 @@ window.onload = function () {
 
     });
 };
+
