@@ -44,7 +44,4 @@ const testimonialsCarouselSlider = () => {
         });
     })
 }
-
-window.onload = function () {
-    testimonialsCarouselSlider();
-}
+testimonialsCarouselSlider();
