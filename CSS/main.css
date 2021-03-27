@@ -200,9 +200,8 @@ a {
 nav.navbar {
   position: relative;
   z-index: 999;
-  margin: auto;
-  width: 90%;
-  padding: 0.5rem 0;
+  width: 100%;
+  padding: 0.5rem 2rem;
   min-height: 57px !important;
   background-color: var(--clr-neutral-white-200);
   -webkit-transition: all 0.3s ease-in-out;
@@ -810,7 +809,6 @@ section {
 
 @media screen and (max-width: 768px) {
   nav.navbar {
-    width: 100%;
     padding: 0.4em;
     border-bottom: 1px solid var(--clr-neutral-black-100);
   }
