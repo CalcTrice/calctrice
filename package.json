@@ -1,10 +1,10 @@
 {
 	"name": "calctrice",
 	"version": "1.0.0",
-	"main": "index.html",
+	"main": "main.js",
 	"scripts": {
-		"dev": "parcel src/*",
-		"build": "parcel build index.html"
+		"dev": "parcel *",
+		"build": "parcel build *"
 	},
 	"repository": {
 		"type": "git",

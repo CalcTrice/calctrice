@@ -5,24 +5,31 @@ const cursorFollower = function () {
         `<span class="cursorFollower">Scroll</span>`;
     document.body.insertAdjacentHTML('afterbegin', followerHTML);
     const follower = document.querySelector('.cursorFollower');
-
     const buttons = document.querySelectorAll('button');
+    const anchors = document.querySelectorAll('a');
     const paragraphs = document.querySelectorAll('p');
+    const clickables = [
+        buttons,
+        anchors
+    ];
 
     document.addEventListener('mousemove', function (Event) {
+        follower.style.opacity = 1;
+        follower.style.zIndex = 9999;
         follower.style.top = `${Event.pageY + 30}px`;
         follower.style.left = `${Event.pageX + 10}px`;
     });
 
-    buttons.forEach(function (button) {
-        button.addEventListener('mouseenter', function () {
-            follower.textContent = 'Click';
+    clickables.forEach(function (clickable) {
+        clickable.forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+                follower.textContent = 'Click';
+            });
+            item.addEventListener('mouseleave', function () {
+                follower.textContent = 'Scroll';
+            });
         });
-        button.addEventListener('mouseleave', function () {
-            follower.textContent = 'Scroll';
-        });
-    });
-
+    })
     paragraphs.forEach(function (paragraph) {
         paragraph.addEventListener('mouseenter', function () {
             follower.textContent = '';
@@ -155,11 +162,28 @@ const navIntersectionObserver = function () {
     const observer = new IntersectionObserver(obsCallback, obsOptions);
     observer.observe(endSection);
 }
+const navBackground = function () {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.add('articles-navbar');
+}
 
-const init = function () {
-    cursorFollower();
+const homepageInit = function () {
     testimonialsCarouselSlider();
     testimonialSlideContentCreator();
     navIntersectionObserver();
+}
+
+const articlesInit = function () {
+    navBackground();
+}
+
+const init = function () {
+    cursorFollower();
+
+    if (document.body.id === "homepage")
+        homepageInit();
+
+    if (document.body.id === "article")
+        articlesInit();
 }
 init();

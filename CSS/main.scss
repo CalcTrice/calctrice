@@ -2,8 +2,6 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600;1,700&display=swap");
 
-// @import url("https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap");
-
 :root {
 	@each $color, $shades in $colors {
 		@each $shade, $value in $shades {
@@ -59,18 +57,23 @@ body {
 	width: 100%;
 	height: 100%;
 }
+
+#homepage {
+	footer.footer {
+		transform: translateY(-50%);
+	}
+}
+#article {
+	background-color: var(--clr-neutral-black-400);
+	position: relative;
+}
 ::selection {
 	background-color: var(--clr-primary-yellow-100);
 }
 
-.container-fluid {
-	padding-left: 0px !important;
-	padding-right: 0px !important;
-}
-
 .cursorFollower {
+	opacity: 0;
 	position: absolute;
-	z-index: 9999;
 	font-size: 13px;
 	font-weight: 600;
 	letter-spacing: 2px;
@@ -78,9 +81,13 @@ body {
 	color: var(--clr-neutral-black-400);
 	background-color: var(--clr-primary-yellow-100);
 }
+
+.container-fluid {
+	padding: 0px !important;
+}
 ////// Component Style Settings - Yash Sonalia - 20 Mar 2021 //////
 
-// Scrollbar Styling{
+// Scrollbar Styling
 .c-scrollbar {
 	z-index: 999;
 	&_thumb {

@@ -55,12 +55,20 @@ nav.navbar {
 
 	.navbar-toggler {
 		border: none;
+		&:focus {
+			box-shadow: none;
+		}
+		.navbar-toggler-icon {
+			background-image: none;
+			background-image: url("../../assets/nav-toggler-icon.svg");
+		}
 	}
 
 	transition: all 0.3s ease-in-out;
 }
 
-nav.darkNav {
+nav.darkNav,
+nav.navbar.articles-navbar {
 	background-color: var(--clr-neutral-black-400);
 
 	.navbar-brand {

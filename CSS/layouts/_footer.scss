@@ -1,0 +1,32 @@
+footer.footer {
+	// position: absolute;
+	// bottom: 0;
+	// left: 0;
+	// //	transform: translateY(-50%);
+	background-color: white;
+	height: 100px;
+	width: 100vw;
+
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	ul {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		padding: 0px;
+		height: auto;
+		margin: auto;
+		list-style: none;
+		li {
+			a {
+				color: var(--clr-neutral-black-300);
+				font-size: 14px;
+				transition: all 0.1s ease-out;
+				&:hover {
+					color: var(--clr-neutral-black-400);
+				}
+			}
+		}
+	}
+}
