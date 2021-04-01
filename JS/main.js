@@ -162,10 +162,6 @@ const navIntersectionObserver = function () {
     const observer = new IntersectionObserver(obsCallback, obsOptions);
     observer.observe(endSection);
 }
-const navBackground = function () {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.add('articles-navbar');
-}
 
 const homepageInit = function () {
     testimonialsCarouselSlider();

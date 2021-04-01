@@ -10,12 +10,18 @@
         <link rel="stylesheet" href="../CSS/main.css" />
         <link rel="stylesheet" href="../CSS/vendors/Bootstrap/css/bootstrap.min.css">
         
+        <script src="https://unpkg.com/@barba/core"></script>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+               
+        <script defer src="../JS/libraryVendors.js"></script>
         <script defer src="../JS/main.js"></script>
 	</head>
-	<body id="article">
+	<body id="article" data-barba="wrapper">
         
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-light ">
-            <div class="container-fluid">
+        <nav id="navbar" class="navbar navbar-expand-lg articles-navbar ">
+            <div class="container-fluid"> 
             <div class="navbar-brand" href="#">CALCTRICE</div>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -29,27 +35,29 @@
                 </ul>
             </div>
         </nav>
-
-        <div dtat-scroll-container class="container-fluid">
-            <section class="row">
-                <div class="col-lg-1 col-md-1 col-sm-0"></div>
-                <div class="article-info-container col-lg-3 col-md-3 col-sm-12"></div>
-                <div class="col-lg-2 col-md-2 col-sm-0"></div>
-                <div class="article-container col-lg-5 col-md-5 col-sm-12">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti, consequatur error modi, expedita tenetur fugiat, nobis reprehenderit ullam qui hic iste quis rem illum! Perferendis consectetur eligendi accusantium nemo.
-                    Sint repudiandae quos suscipit odit officiis assumenda sapiente consectetur, nam architecto magnam earum deserunt ipsum ducimus dicta nihil saepe! Officiis laudantium quasi ea fuga sint autem, placeat magnam sequi cupiditate?
-                    Ullam nostrum rem, aut tempore dolor delectus nesciunt fugiat illo, ab necessitatibus velit dicta vel, dignissimos saepe. Ut quisquam, vero officia sequi reprehenderit sapiente voluptatem, officiis ex hic quam eius.
-                    Ipsum sunt excepturi quaerat sint maiores necessitatibus magnam, recusandae pariatur quas, et voluptate reiciendis illo unde explicabo dicta magni qui nisi. Consequuntur esse voluptate assumenda ducimus placeat, quae sit iure?
-                    Reprehenderit, quod? Qui ea amet adipisci inventore optio necessitatibus, praesentium quod veniam? Eos quos asperiores, ipsam ipsa ducimus magnam ratione nesciunt maiores amet explicabo unde id nihil error sit eum.
-                    Vitae, accusamus atque. Ratione repudiandae aperiam pariatur, inventore veritatis nam sit maiores voluptate reiciendis iusto neque debitis ut atque numquam hic quasi eligendi consequatur sequi adipisci, accusantium placeat in sed.
-                    Atque odio perspiciatis suscipit? Voluptates vel molestias sequi optio animi! Quasi perspiciatis fugiat perferendis est debitis qui vel nesciunt earum rem dolorum odio voluptatibus aut culpa id incidunt, reprehenderit sed?
-                    Magni vitae cum deleniti minus quasi dignissimos obcaecati dicta neque deserunt commodi totam corrupti, animi laboriosam, asperiores exercitationem! Natus est aut, provident tempore velit suscipit eligendi. Perferendis atque vero dolor?
-                    Pariatur harum, odio incidunt at officiis facilis vitae et velit soluta dolores dolorum quisquam praesentium in, accusamus nesciunt? Est tempore repudiandae facilis deleniti. Tenetur cum nobis sapiente repellendus harum vero.
-                    Maiores rem officiis nobis expedita? Ullam tenetur voluptas nam, aperiam quas tempore eligendi eveniet doloremque sapiente sed aliquid exercitationem, unde, blanditiis amet! Corrupti obcaecati fuga excepturi nulla, inventore at doloremque.</p>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-0"></div>
-            </section>
-        </div>
+        <main data-barba="container" data-barba-namespace = "article-1">
+            <div class="container-fluid">
+                <section class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-0"></div>
+                    <div class="article-info-container col-lg-3 col-md-3 col-sm-12"></div>
+                    <div class="col-lg-2 col-md-2 col-sm-0"></div>
+                    <div class="article-container col-lg-5 col-md-5 col-sm-12">
+                        <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id deleniti, consequatur error modi, expedita tenetur fugiat, nobis reprehenderit ullam qui hic iste quis rem illum! Perferendis consectetur eligendi accusantium nemo.
+                        Sint repudiandae quos suscipit odit officiis assumenda sapiente consectetur, nam architecto magnam earum deserunt ipsum ducimus dicta nihil saepe! Officiis laudantium quasi ea fuga sint autem, placeat magnam sequi cupiditate?
+                        Ullam nostrum rem, aut tempore dolor delectus nesciunt fugiat illo, ab necessitatibus velit dicta vel, dignissimos saepe. Ut quisquam, vero officia sequi reprehenderit sapiente voluptatem, officiis ex hic quam eius.
+                        Ipsum sunt excepturi quaerat sint maiores necessitatibus magnam, recusandae pariatur quas, et voluptate reiciendis illo unde explicabo dicta magni qui nisi. Consequuntur esse voluptate assumenda ducimus placeat, quae sit iure?
+                        Reprehenderit, quod? Qui ea amet adipisci inventore optio necessitatibus, praesentium quod veniam? Eos quos asperiores, ipsam ipsa ducimus magnam ratione nesciunt maiores amet explicabo unde id nihil error sit eum.
+                        Vitae, accusamus atque. Ratione repudiandae aperiam pariatur, inventore veritatis nam sit maiores voluptate reiciendis iusto neque debitis ut atque numquam hic quasi eligendi consequatur sequi adipisci, accusantium placeat in sed.
+                        Atque odio perspiciatis suscipit? Voluptates vel molestias sequi optio animi! Quasi perspiciatis fugiat perferendis est debitis qui vel nesciunt earum rem dolorum odio voluptatibus aut culpa id incidunt, reprehenderit sed?
+                        Magni vitae cum deleniti minus quasi dignissimos obcaecati dicta neque deserunt commodi totam corrupti, animi laboriosam, asperiores exercitationem! Natus est aut, provident tempore velit suscipit eligendi. Perferendis atque vero dolor?
+                        Pariatur harum, odio incidunt at officiis facilis vitae et velit soluta dolores dolorum quisquam praesentium in, accusamus nesciunt? Est tempore repudiandae facilis deleniti. Tenetur cum nobis sapiente repellendus harum vero.
+                        Maiores rem officiis nobis expedita? Ullam tenetur voluptas nam, aperiam quas tempore eligendi eveniet doloremque sapiente sed aliquid exercitationem, unde, blanditiis amet! Corrupti obcaecati fuga excepturi nulla, inventore at doloremque.</p>
+                    </div>
+                    <div class="col-lg-1 col-md-1 col-sm-0"></div>
+                </section>
+            </div>
+        </main>
+        
         <footer class="footer">
             <ul>
                 <li><a href="#">Link</a></li>
@@ -68,9 +76,6 @@
             </ul>
         </footer>
         <script src="../CSS/vendors/Bootstrap/js/bootstrap.min.js"></script>
-     
- 
-            
-
+        <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
     </body>
 </html>

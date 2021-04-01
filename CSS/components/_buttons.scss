@@ -101,6 +101,9 @@
 	height: 40px;
 	position: relative;
 	padding: 0rem !important;
+	a {
+		color: var(--clr-neutral-black-400) !important;
+	}
 	&::after {
 		content: "";
 		position: absolute;

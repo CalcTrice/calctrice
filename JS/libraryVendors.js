@@ -1,12 +1,48 @@
-// Particle Effect
-const particles = function () {
+//Barba
+const pageTransition = function () {
+    let tl = gsap.timeline();
 
+    tl.to("ul.transition li", { duration: 1, scaleY: 1, transformOrigin: "bottom left", stagger: 0.1, ease: "power4.easeOut" });
+    tl.to("ul.transition li", { duration: 1, scaleY: 0, transformOrigin: "bottom left", stagger: 0.1, delay: 0.1 });
+}
 
-};
+const contentAnimation = function () {
+    let tl = gsap.timeline();
+    tl.from('nav', { translateY: "-100%", duration: 1, opacity: 0 })
+}
+const delay = function (n) {
+    n = n || 2000;
+    return new Promise(done => {
+        setTimeout(() => {
+            done();
+        }, n);
+    });
+}
+
+barba.init({
+    sync: true,
+    transitions: [{
+        async leave(data) {
+            const done = this.async();
+            pageTransition();
+            await delay(1500);
+            done();
+        },
+        async enter(data) {
+            contentAnimation();
+        },
+        async once(data) {
+            contentAnimation();
+        }
+    }]
+
+});
 //Locomotive Scroll
 const loco = function () {
     const button = document.querySelector(".exploreNow");
-    const section = document.querySelector('.whatWeDoSection');
+    const resize = document.querySelectorAll('.accordion-button');
+    //  const section = document.querySelector('.whatWeDoSection');
+
     const scroll = new LocomotiveScroll({
         el: document.querySelector('[data-scroll-container]'),
         smooth: true,
@@ -16,6 +52,20 @@ const loco = function () {
 
     button.addEventListener('click', function () {
         scroll.scrollTo('.whatWeDoSection', -60);
+    });
+
+
+    resize.forEach(function (button) {
+
+        if (button.classList.contains('collapsed')) {
+            setInterval(() => {
+                scroll.update();
+
+            }, 1000);
+        }
+        else scroll.update();
+
+
     })
 }
 //GSAP
@@ -78,7 +128,7 @@ const section3gsap = function () {
     const section3Observer = new IntersectionObserver(section3ObsCallback, section3ObsOptions);
     section3Observer.observe(section3);
 }
-const gsapInit = function () {
+const gsapInitHome = function () {
 
     let tl = gsap.timeline({
         scrollTrigger: {
@@ -89,7 +139,8 @@ const gsapInit = function () {
     });
 
     tl
-        .from(".heading-span", { y: 200, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.4 }, "+=1")
+        .to("body", { opacity: 1, duration: 1 },)
+        .from(".heading-span", { y: 200, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.4 },)
         .from(".heading-span-2", { x: -100, opacity: 0, duration: 1, ease: "expo.out", stagger: 0.4 }, "-=.4")
         .from(".exploreNow", { y: '100%', opacity: 0, duration: 0.7, ease: "expo.out" },)
         .from(".readOurArticles", { y: '100%', opacity: 0, duration: 0.7, ease: "expo.out" }, "-=.5")
@@ -102,9 +153,9 @@ const gsapInit = function () {
 }
 //INIT
 const initVendor = function () {
-    // particles();
-    loco();
-    gsapInit();
+
+    document.body.id === "homepage" && loco();
+    document.body.id === "homepage" && gsapInitHome();
 }
 
 initVendor();
